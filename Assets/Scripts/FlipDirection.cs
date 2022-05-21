@@ -6,7 +6,7 @@ class FlipDirection : MonoBehaviour
 {
     [SerializeField] float _duration = 0.1f;
 
-    public void Moving(int direction)
+    public void Change(int direction)
     {
         if (!ShouldFlip(direction))
             return;

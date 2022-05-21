@@ -20,8 +20,9 @@ class PlayerMovement : MonoBehaviour
 
     [SerializeField] UnityEvent _onJump;
     [SerializeField] UnityEvent _onLand;
-    [SerializeField] UnityEvent<int> _onMove;
-    [SerializeField] UnityEvent<int> _onStop;
+    [SerializeField] UnityEvent<int> _onDirectionChange;
+    [SerializeField] UnityEvent _onMove;
+    [SerializeField] UnityEvent _onStop;
 
     float _horizontalInput;
     float _jumpBuffer;
@@ -73,16 +74,21 @@ class PlayerMovement : MonoBehaviour
 
     void Move()
     {
+        if (!_isMoving && _horizontalInput != 0 && _groundTimer > 0)
+        {
+            _isMoving = true;
+            _onMove.Invoke();
+        }
+        else if ((_horizontalInput == 0 || _groundTimer <= 0) && _isMoving)
+        {
+            _isMoving = false;
+            _onStop.Invoke();
+        }
+        
         if (_horizontalInput != 0 && _horizontalInput != _direction)
         {
             _direction = (int) _horizontalInput;
-            _onMove.Invoke(_direction);
-            _isMoving = true;
-        }
-        else if (_horizontalInput == 0 && _isMoving)
-        {
-            _onStop.Invoke(_direction);
-            _isMoving = false;
+            _onDirectionChange.Invoke(_direction);
         }
         var target = _speed * _horizontalInput;
         var t = target == 0 ? _deceleration : _acceleration;

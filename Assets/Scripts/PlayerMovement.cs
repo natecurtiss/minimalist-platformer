@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using static UnityEngine.Gizmos;
 using static UnityEngine.Input;
 using static UnityEngine.Mathf;
@@ -9,16 +10,23 @@ class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D _rigidbody;
 
-    [SerializeField] float _speed;
-    [SerializeField] float _acceleration;
-    [SerializeField] float _deceleration;
-    [SerializeField] float _jump;
-    [SerializeField] float _groundDistance;
-    [SerializeField] float _coyoteTime;
+    [SerializeField] float _speed = 18f;
+    [SerializeField] float _acceleration = 0.4f;
+    [SerializeField] float _deceleration = 0.2f;
+    [SerializeField] float _jump = 40f;
+    [SerializeField] float _groundDistance = 1f;
+    [SerializeField] float _coyoteTime = 0.2f;
+
+    [SerializeField] UnityEvent _onJump;
+    [SerializeField] UnityEvent _onLand;
+    [SerializeField] UnityEvent<int> _onMove;
+    [SerializeField] UnityEvent<int> _onStop;
 
     float _horizontalInput;
     float _jumpBuffer;
     float _groundTimer;
+    bool _isMoving;
+    int _direction;
 
     void Awake() => _rigidbody = GetComponent<Rigidbody2D>();
 
@@ -48,18 +56,33 @@ class PlayerMovement : MonoBehaviour
     {
         var hit = Raycast(transform.position, Vector2.down, _groundDistance);
         if (hit.collider is not null)
+        {
+            if (_groundTimer <= 0) 
+                _onLand.Invoke();
             _groundTimer = _coyoteTime;
+        }
     }
     
     void GetInput()
     {
         _horizontalInput = GetAxisRaw("Horizontal");
-        if (GetKeyDown(KeyCode.Space))
+        if (GetAxisRaw("Vertical") == 1)
             _jumpBuffer = _coyoteTime;
     }
 
     void Move()
     {
+        if (_horizontalInput != 0 && _horizontalInput != _direction)
+        {
+            _direction = (int) _horizontalInput;
+            _onMove.Invoke(_direction);
+            _isMoving = true;
+        }
+        else if (_horizontalInput == 0 && _isMoving)
+        {
+            _onStop.Invoke(_direction);
+            _isMoving = false;
+        }
         var target = _speed * _horizontalInput;
         var t = target == 0 ? _deceleration : _acceleration;
         var lerp = Lerp(_rigidbody.velocity.x, target, t);
@@ -71,5 +94,6 @@ class PlayerMovement : MonoBehaviour
         _rigidbody.velocity = new(_rigidbody.velocity.x, _jump);
         _groundTimer = 0f;
         _jumpBuffer = 0f;
+        _onJump.Invoke();
     }
 }

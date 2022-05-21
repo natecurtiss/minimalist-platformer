@@ -10,6 +10,7 @@ class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D _rigidbody;
 
+    [SerializeField] LayerMask _ground;
     [SerializeField] float _speed = 18f;
     [SerializeField] float _acceleration = 0.4f;
     [SerializeField] float _deceleration = 0.2f;
@@ -54,7 +55,7 @@ class PlayerMovement : MonoBehaviour
 
     void CheckGround()
     {
-        var hit = Raycast(transform.position, Vector2.down, _groundDistance);
+        var hit = Raycast(transform.position, Vector2.down, _groundDistance, _ground);
         if (hit.collider is not null)
         {
             if (_groundTimer <= 0) 

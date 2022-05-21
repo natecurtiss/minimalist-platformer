@@ -494,10 +494,10 @@ MonoBehaviour:
   _recoverDuration: 0.3
   _ease: 6
   _inX: 1.5
-  _inY: 0.8
+  _inY: 0.6
   _inDuration: 0.2
   _outX: 1.5
-  _outY: 0.8
+  _outY: 0.6
   _outDuration: 0
 --- !u!1 &789248793
 GameObject:
@@ -546,12 +546,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _recoverDuration: 0.2
   _ease: 6
-  _inX: 1.2
+  _inX: 1.3
   _inY: 0.4
-  _inDuration: 0.2
+  _inDuration: 0.1
   _outX: 0.5
   _outY: 1.3
-  _outDuration: 0.2
+  _outDuration: 0.3
 --- !u!1 &1034817813
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 20
-  _recovery: 0.2
+  _recovery: 0.4
   _angle: 15
   _tolerance: 4
 --- !u!1 &1128618269

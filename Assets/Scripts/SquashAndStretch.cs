@@ -1,11 +1,12 @@
 using DG.Tweening;
 using UnityEngine;
 using static DG.Tweening.DOTween;
+using static DG.Tweening.Ease;
 
 class SquashAndStretch : MonoBehaviour
 {
     [SerializeField] float _recoverDuration = 0.3f;
-    [SerializeField] Ease _ease;
+    [SerializeField] Ease _ease = OutQuad;
     
     [Header("In")]
     [SerializeField] float _inX = 1f;

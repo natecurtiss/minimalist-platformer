@@ -17,6 +17,7 @@ class PlayerMovement : MonoBehaviour
     [SerializeField] float _jump = 40f;
     [SerializeField] float _groundDistance = 1f;
     [SerializeField] float _coyoteTime = 0.2f;
+    [SerializeField] float _landThreshold = 0.2f;
 
     [SerializeField] UnityEvent _onJump;
     [SerializeField] UnityEvent _onLand;
@@ -59,7 +60,7 @@ class PlayerMovement : MonoBehaviour
         var hit = Raycast(transform.position, Vector2.down, _groundDistance, _ground);
         if (hit.collider is not null)
         {
-            if (_groundTimer <= 0) 
+            if (_groundTimer <= -_landThreshold) 
                 _onLand.Invoke();
             _groundTimer = _coyoteTime;
         }

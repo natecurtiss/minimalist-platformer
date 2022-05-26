@@ -45,6 +45,7 @@ class PlayerMovement : MonoBehaviour
         Move();
         if (_jumpBuffer > 0 && _groundTimer > 0)
             Jump();
+        
     }
 
     void OnDrawGizmos() => DrawRay(transform.position, Vector3.down * _groundDistance);
@@ -91,6 +92,7 @@ class PlayerMovement : MonoBehaviour
             _direction = (int) _horizontalInput;
             _onDirectionChange.Invoke(_direction);
         }
+        
         var target = _speed * _horizontalInput;
         var t = target == 0 ? _deceleration : _acceleration;
         var lerp = Lerp(_rigidbody.velocity.x, target, t);

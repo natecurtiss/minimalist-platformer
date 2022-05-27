@@ -10,8 +10,7 @@ namespace Player
     {
         [SerializeField] LayerMask _layer;
         [SerializeField] float _distance = 1.5f;
-        [SerializeField] UnityEvent _onHitWall;
-        
+
         public bool IsOnWall { get; private set; }
         public Direction WallSide { get; private set; } = None;
         
@@ -21,15 +20,11 @@ namespace Player
             var right = Raycast(transform.position, Vector2.right, _distance, _layer);
             if (left.collider is not null)
             {
-                if (!IsOnWall)
-                    _onHitWall.Invoke();
                 IsOnWall = true;
                 WallSide = Left;
             }
             else if (right.collider is not null)
             {
-                if (!IsOnWall)
-                    _onHitWall.Invoke();
                 IsOnWall = true;
                 WallSide = Right;
             }

@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using Utils;
+using static Player.StateID;
 using static UnityEngine.Time;
 
 namespace Player
@@ -11,6 +12,7 @@ namespace Player
     {
         [SerializeField] Vector2 _wallJumpBounce = Vector2.one * 20;
         [SerializeField] float _wallJumpFreeze = 1f;
+        [SerializeField, Space] UnityEvent _onLand;
         [SerializeField, Space] UnityEvent _onWallJump;
         
         readonly Timer _wallJumpTimer = new();
@@ -31,6 +33,8 @@ namespace Player
         {
             if (Player.WallCheck.IsOnWall && Player.Inputs.Jump)
                 WallJump();
+            else if (Player.GroundCheck.IsGrounded)
+                Land();
         }
 
         void TickTimers() => _wallJumpTimer.Tick(deltaTime);
@@ -38,9 +42,15 @@ namespace Player
         void WallJump()
         {
             Stop();
-            _wallJumpTimer.Set(_wallJumpFreeze);
             Player.Rigidbody.velocity = _wallJumpBounce * (int) Player.WallCheck.WallSide;
+            _wallJumpTimer.Set(_wallJumpFreeze);
             _onWallJump.Invoke();
+        }
+
+        void Land()
+        {
+            _onLand.Invoke();
+            Player.Transition(Ground);
         }
     }
 }

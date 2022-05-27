@@ -1,13 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 using static UnityEngine.Mathf;
 
 namespace Player
 { 
+    [Serializable]
     abstract class Move : State
     {
         [SerializeField] UnityEvent _onStartMoving;
         [SerializeField] UnityEvent _onStopMoving;
+        [SerializeField] UnityEvent<int> _onChangeDirection;
         
         [field: SerializeField]
         protected float Speed { get; private set; } = 20f;
@@ -45,6 +48,8 @@ namespace Player
                 var t = target == 0 ? Deceleration : Acceleration;
                 var lerp = Lerp(Player.Rigidbody.velocity.x, target, t);
                 Player.Rigidbody.velocity = new(lerp, Player.Rigidbody.velocity.y);
+                if (_isMoving)
+                    _onChangeDirection.Invoke((int) Player.Inputs.Horizontal);
             }
         }
 

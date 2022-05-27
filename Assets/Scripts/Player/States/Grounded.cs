@@ -9,7 +9,7 @@ namespace Player
     class Grounded : Move
     {
         [SerializeField] float _jump = 30f;
-        [SerializeField] UnityEvent _onJump;
+        [SerializeField, Space] UnityEvent _onJump;
         [SerializeField] UnityEvent _onFall;
 
         public override void Update()

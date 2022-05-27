@@ -11,7 +11,7 @@ namespace Player
     {
         [SerializeField] Vector2 _wallJumpBounce = Vector2.one * 20;
         [SerializeField] float _wallJumpFreeze = 1f;
-        [SerializeField] UnityEvent _onWallJump;
+        [SerializeField, Space] UnityEvent _onWallJump;
         
         readonly Timer _wallJumpTimer = new();
 

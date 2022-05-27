@@ -5494,7 +5494,6 @@ GameObject:
   - component: {fileID: 1034817815}
   - component: {fileID: 1034817819}
   - component: {fileID: 1034817818}
-  - component: {fileID: 1034817817}
   - component: {fileID: 1034817820}
   - component: {fileID: 1034817822}
   - component: {fileID: 1034817821}
@@ -5522,157 +5521,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1034817817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034817813}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a770291db992c9f49a597bcfc84ea6b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ground:
-    serializedVersion: 2
-    m_Bits: 64
-  _wall:
-    serializedVersion: 2
-    m_Bits: 64
-  _speed: 20
-  _acceleration: 0.4
-  _deceleration: 0.2
-  _jump: 30
-  _groundDistance: 1.66
-  _wallDistance: 1.5
-  _wallJumpCooldown: 0.2
-  _wallJumpBounce: 80
-  _coyoteTime: 0.1
-  _landThreshold: 0.2
-  _onJump:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 789248795}
-        m_TargetAssemblyTypeName: SquashAndStretch, Assembly-CSharp
-        m_MethodName: Do
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onLand:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 739740372}
-        m_TargetAssemblyTypeName: SquashAndStretch, Assembly-CSharp
-        m_MethodName: Do
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 665278160}
-        m_TargetAssemblyTypeName: ParticleSpawn, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 739740373}
-        m_TargetAssemblyTypeName: Effects.ShakeMainCamera, Assembly-CSharp
-        m_MethodName: Shake
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onDirectionChange:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 300309870}
-        m_TargetAssemblyTypeName: FlipDirection, Assembly-CSharp
-        m_MethodName: Change
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onMove:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1067058739}
-        m_TargetAssemblyTypeName: TiltAngle, Assembly-CSharp
-        m_MethodName: Go
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1614209122}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onStop:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1067058739}
-        m_TargetAssemblyTypeName: TiltAngle, Assembly-CSharp
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1614209122}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!50 &1034817818
 Rigidbody2D:
   serializedVersion: 4
@@ -5840,6 +5688,45 @@ MonoBehaviour:
     <Deceleration>k__BackingField: 0.2
     _wallJumpBounce: {x: 20, y: 20}
     _wallJumpFreeze: 1
+    _onLand:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 739740372}
+          m_TargetAssemblyTypeName: Effects.SquashAndStretch, Assembly-CSharp
+          m_MethodName: Do
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 665278159}
+          m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 739740373}
+          m_TargetAssemblyTypeName: Effects.ShakeMainCamera, Assembly-CSharp
+          m_MethodName: Shake
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     _onWallJump:
       m_PersistentCalls:
         m_Calls: []
@@ -5864,45 +5751,6 @@ MonoBehaviour:
     m_Bits: 64
   _distance: 1.66
   _coyoteTime: 0.2
-  _onLand:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 739740372}
-        m_TargetAssemblyTypeName: Effects.SquashAndStretch, Assembly-CSharp
-        m_MethodName: Do
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 665278159}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 739740373}
-        m_TargetAssemblyTypeName: Effects.ShakeMainCamera, Assembly-CSharp
-        m_MethodName: Shake
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1034817822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5932,9 +5780,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _distance: 1.5
-  _onHitWall:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1067058737
 GameObject:
   m_ObjectHideFlags: 0

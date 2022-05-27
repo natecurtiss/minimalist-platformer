@@ -7,6 +7,8 @@ namespace Player
     class PlayerController : MonoBehaviour
     {
         [SerializeField] StateID _starting = Air;
+        [SerializeField] Grounded _groundedState;
+        [SerializeField] Airborne _airborneState;
         
         [field: SerializeField]
         public Rigidbody2D Rigidbody { get; private set; }
@@ -20,16 +22,16 @@ namespace Player
         [field: SerializeField]
         public WallCheck WallCheck { get; private set; }
 
-        readonly Dictionary<StateID, State> _states = new()
-        {
-            { Ground, new Grounded() },
-            { Air, new Airborne() }
-        };
-
+        Dictionary<StateID, State> _states;
         StateID _current;
 
         void Start()
         {
+            _states = new()
+            {
+                { Ground, _groundedState },
+                { Air, _airborneState }
+            };
             foreach (var (_, state) in _states) 
                 state.Init(this);
             _current = _starting;

@@ -5519,11 +5519,15 @@ MonoBehaviour:
   _ground:
     serializedVersion: 2
     m_Bits: 64
+  _wall:
+    serializedVersion: 2
+    m_Bits: 64
   _speed: 20
   _acceleration: 0.4
   _deceleration: 0.2
   _jump: 40
   _groundDistance: 1.66
+  _wallDistance: 1
   _coyoteTime: 0.2
   _landThreshold: 0.2
   _onJump:
@@ -5580,6 +5584,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onWall:
+    m_PersistentCalls:
+      m_Calls: []
   _onDirectionChange:
     m_PersistentCalls:
       m_Calls:

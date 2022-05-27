@@ -11,11 +11,13 @@ class PlayerMovement : MonoBehaviour
     Rigidbody2D _rigidbody;
 
     [SerializeField] LayerMask _ground;
+    [SerializeField] LayerMask _wall;
     [SerializeField] float _speed = 18f;
     [SerializeField] float _acceleration = 0.4f;
     [SerializeField] float _deceleration = 0.2f;
     [SerializeField] float _jump = 40f;
     [SerializeField] float _groundDistance = 1f;
+    [SerializeField] float _wallDistance = 1f;
     [SerializeField] float _coyoteTime = 0.2f;
     [SerializeField] float _landThreshold = 0.2f;
 
@@ -37,6 +39,7 @@ class PlayerMovement : MonoBehaviour
     {
         TickTimers();
         CheckGround();
+        CheckWall();
         GetInput();
     }
 
@@ -45,7 +48,7 @@ class PlayerMovement : MonoBehaviour
         Move();
         if (_jumpBuffer > 0 && _groundTimer > 0)
             Jump();
-        
+
     }
 
     void OnDrawGizmos() => DrawRay(transform.position, Vector3.down * _groundDistance);
@@ -61,12 +64,21 @@ class PlayerMovement : MonoBehaviour
         var hit = Raycast(transform.position, Vector2.down, _groundDistance, _ground);
         if (hit.collider is not null)
         {
-            if (_groundTimer <= -_landThreshold) 
+            if (_groundTimer <= -_landThreshold)
                 _onLand.Invoke();
             _groundTimer = _coyoteTime;
         }
     }
-    
+
+    void CheckWall()
+    {
+        var left = Raycast(transform.position, Vector2.left, _wallDistance, _wall);
+        var right = Raycast(transform.position, Vector2.right, _wallDistance, _wall);
+        var isOnWall = left.collider is not null || right.collider is not null;
+        if (isOnWall)
+            _groundTimer = _coyoteTime;
+    }
+
     void GetInput()
     {
         _horizontalInput = GetAxisRaw("Horizontal");

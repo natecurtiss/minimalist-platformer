@@ -66,10 +66,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,14 +123,14 @@ TextureImporter:
         y: 2000
         width: 500
         height: 500
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10f6d3665f8883e43b144a7a8485d592
+      spriteID: c003ca6468b063e4db35930fe5e5f37d
       internalID: -1328870297
       vertices: []
       indices: 
@@ -151,8 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28665e94a31f89d4aaf805d6d10f13cb
-      internalID: 397966111
+      spriteID: 598158056ac3f1849bd27f0509078b49
+      internalID: 292242266
       vertices: []
       indices: 
       edges: []
@@ -172,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa94e5f8f3758f749a929064f27146bf
-      internalID: 742065855
+      spriteID: 1541cb9b5e49f064a8b3d234066ba703
+      internalID: 1683760138
       vertices: []
       indices: 
       edges: []
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 518179201041e5a4492351902822bf8e
-      internalID: -222198154
+      spriteID: efd1330e96c374f4fa012e41251e1e5c
+      internalID: 1749712686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Portal
+      name: Sphere
       rect:
         serializedVersion: 2
         x: 2000
@@ -214,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e54cc6300caa24e42ba935f795aed0c4
-      internalID: 1844211349
+      spriteID: 9bffe939fc89eaa49adc26eadbb15d67
+      internalID: -220158983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_TL
+      name: Grass_T-L
       rect:
         serializedVersion: 2
         x: 500
@@ -235,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aab2670629f4eae41bc58690ae1d1f1f
-      internalID: 1447596967
+      spriteID: 6b6fac8e915f2404caf33e9e0a165faf
+      internalID: 455810763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_TM
+      name: Grass_T
       rect:
         serializedVersion: 2
         x: 1000
@@ -256,14 +256,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f2abb6a14e426844a5e0aa6faa3ef37
-      internalID: -810905596
+      spriteID: ab4e285ed0656ea4e997371e39d44baa
+      internalID: -2121366001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_TR
+      name: Grass_T-R
       rect:
         serializedVersion: 2
         x: 1500
@@ -277,29 +277,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0d3bc6a933afdd42871157a9684b0c7
-      internalID: -1378121308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Drop
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 1500
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 231f037037bd62c459d4bfd964c11ddc
-      internalID: -1761761610
+      spriteID: e56f0a86714d8dd49ab720079dc9f0d3
+      internalID: 1011045373
       vertices: []
       indices: 
       edges: []
@@ -319,8 +298,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b51ef5dc49ea03b45800c354472543cc
-      internalID: -254460682
+      spriteID: 7d67e93d224e30f43ac1029d50e0ab27
+      internalID: 1594649888
       vertices: []
       indices: 
       edges: []
@@ -329,7 +308,7 @@ TextureImporter:
       name: Grass_M
       rect:
         serializedVersion: 2
-        x: 997
+        x: 1000
         y: 1000
         width: 500
         height: 500
@@ -340,8 +319,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 636961865be7b9044a4c75abb0c74f3c
-      internalID: 89302308
+      spriteID: c14fd2b63ef80be48beba1bf167afd96
+      internalID: 1705346548
       vertices: []
       indices: 
       edges: []
@@ -361,14 +340,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c1a40b9b489a9f47a893ca65ec1d726
-      internalID: -337339462
+      spriteID: 80975daf965c4484fb403b975c56b6ad
+      internalID: 1216731282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_BL
+      name: Grass_B-L
       rect:
         serializedVersion: 2
         x: 500
@@ -382,14 +361,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da191dd68f50cab43b28e2c801309b20
-      internalID: 1948014694
+      spriteID: a1fde4719238aa647990ffaf197d4941
+      internalID: 498779801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_BM
+      name: Grass_B
       rect:
         serializedVersion: 2
         x: 1000
@@ -403,14 +382,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8978ca9b0f339a340b9c8021516ae978
-      internalID: -494330835
+      spriteID: 95de3c9676037f7429d450ff1a6bea01
+      internalID: -2063479555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_BR
+      name: Grass_B-R
       rect:
         serializedVersion: 2
         x: 1500
@@ -424,8 +403,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c038a191492f84542bde2c3db002c551
-      internalID: -430559207
+      spriteID: d32366e82759e4c45aeaaac5d443abb3
+      internalID: -896951281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corner_T-L
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f04cdc9b2ccbc547a00b913a9516510
+      internalID: -1737964501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corner_B-L
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c6c0ef9aba6ca4c9461834b2467224
+      internalID: 236073172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corner_T-R
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fd47598ebf8394bb4630cfa65e0422
+      internalID: -1373014541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corner_B-R
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57563571bc6ae0341a57005ce49bfd12
+      internalID: 1573523833
       vertices: []
       indices: 
       edges: []
@@ -441,22 +504,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grass_BM: -494330835
-      Tree_S: -222198154
+      Tree_S: 1749712686
+      Grass_B-L: 498779801
+      Grass_B-R: -896951281
+      Corner_B-L: 236073172
       Sprites_5: 719557416
-      Tree_M: 742065855
-      Grass_L: -254460682
-      Grass_TR: -1378121308
-      Tree_L: 397966111
+      Corner_T-R: -1373014541
+      Tree_M: 1683760138
+      Corner_B-R: 1573523833
+      Grass_T-R: 1011045373
+      Grass_L: 1594649888
+      Tree_L: 292242266
       Player: -1328870297
-      Grass_M: 89302308
-      Grass_BL: 1948014694
-      Grass_BR: -430559207
-      Grass_TM: -810905596
-      Grass_R: -337339462
-      Drop: -1761761610
-      Portal: 1844211349
-      Grass_TL: 1447596967
+      Grass_M: 1705346548
+      Corner_T-L: -1737964501
+      Grass_R: 1216731282
+      Drop: 224247851
+      Sphere: -220158983
+      Grass_B: -2063479555
+      Grass_T: -2121366001
+      Grass_T-L: 455810763
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

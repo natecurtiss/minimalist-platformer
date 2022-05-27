@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using static UnityEngine.Mathf;
 
 namespace Player
 { 
     abstract class Move : State
     {
+        [SerializeField] UnityEvent _onStartMoving;
+        [SerializeField] UnityEvent _onStopMoving;
+        
         [field: SerializeField]
         protected float Speed { get; private set; } = 20f;
 
@@ -17,6 +21,7 @@ namespace Player
         protected PlayerController Player { get; private set; }
 
         bool _canMove;
+        bool _isMoving;
 
         public override void Init(PlayerController player) => Player = player;
 
@@ -26,6 +31,16 @@ namespace Player
         {
             if (_canMove)
             {
+                if (Player.Inputs.Horizontal != 0 && !_isMoving)
+                {
+                    _isMoving = true;
+                    _onStartMoving.Invoke();
+                }
+                else if (Player.Inputs.Horizontal == 0 && _isMoving)
+                {
+                    _isMoving = false;
+                    _onStopMoving.Invoke();
+                }
                 var target = Speed * Player.Inputs.Horizontal;
                 var t = target == 0 ? Deceleration : Acceleration;
                 var lerp = Lerp(Player.Rigidbody.velocity.x, target, t);
@@ -33,7 +48,15 @@ namespace Player
             }
         }
 
-        public override void Exit() => _canMove = true;
+        public override void Exit()
+        {
+            _canMove = true;
+            if (_isMoving)
+            {
+                _isMoving = false;
+                _onStopMoving.Invoke();
+            }
+        }
 
         protected void Start() => _canMove = true;
 

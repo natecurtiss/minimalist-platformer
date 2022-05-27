@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 using static Player.StateID;
 
 namespace Player
@@ -8,18 +9,27 @@ namespace Player
     class Grounded : Move
     {
         [SerializeField] float _jump = 30f;
+        [SerializeField] UnityEvent _onJump;
+        [SerializeField] UnityEvent _onFall;
 
         public override void Update()
         {
             if (!Player.GroundCheck.IsGrounded)
-                Player.Transition(Air);
+                Fall();
             else if (Player.Inputs.Jump)
                 Jump();
+        }
+
+        void Fall()
+        {
+            _onFall.Invoke();
+            Player.Transition(Air);
         }
 
         void Jump()
         {
             Player.Rigidbody.velocity = new(Player.Rigidbody.velocity.x, _jump);
+            _onJump.Invoke();
             Player.Transition(Air);
         }
     }

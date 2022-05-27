@@ -7,7 +7,7 @@ namespace Player
     class GroundCheck : MonoBehaviour
     {
         [SerializeField] LayerMask _layer;
-        [SerializeField] float _distance = 1f;
+        [SerializeField] float _distance = 1.66f;
         [SerializeField] float _coyoteTime = 0.2f;
         [SerializeField] UnityEvent _onLand;
         

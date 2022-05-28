@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using static UnityEngine.ForceMode2D;
@@ -9,6 +10,7 @@ using static UnityEngine.Time;
 
 namespace Player
 {
+    [Obsolete]
     class PlayerMovement : MonoBehaviour
     {
         Rigidbody2D _rigidbody;

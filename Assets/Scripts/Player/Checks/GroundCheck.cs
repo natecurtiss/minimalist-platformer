@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using static UnityEngine.Color;
+using static UnityEngine.Gizmos;
 using static UnityEngine.Physics2D;
+using static UnityEngine.Time;
 
 namespace Player
 {
@@ -16,9 +19,16 @@ namespace Player
 
         void Update()
         {
+            _groundTimer -= deltaTime;
             var hit = Raycast(transform.position, Vector2.down, _distance, _layer);
             if (hit.collider is not null) 
                 _groundTimer = _coyoteTime;
+        }
+
+        void OnDrawGizmos()
+        {
+            color = magenta;
+            DrawRay(transform.position, Vector3.down * _distance);
         }
 
         public void Reset() => _groundTimer = 0f;

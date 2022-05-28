@@ -28,9 +28,9 @@ namespace Player
 
         void Jump()
         {
+            Player.Rigidbody.velocity = new(Player.Rigidbody.velocity.x, _jump);
             Player.GroundCheck.Reset();
             Player.Inputs.ResetJump();
-            Player.Rigidbody.velocity = new(Player.Rigidbody.velocity.x, _jump);
             _onJump.Invoke();
             Player.Transition(Air);
         }

@@ -63,8 +63,8 @@ namespace Player
             }
         }
 
-        protected void Start() => _canMove = true;
+        protected void ResumeMovement() => _canMove = true;
 
-        protected void Stop() => _canMove = false;
+        protected void PauseMovement() => _canMove = false;
     }
 }

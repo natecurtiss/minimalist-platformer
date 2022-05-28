@@ -5,23 +5,22 @@ namespace Utils
     class Timer
     {
         public event Action OnFinished;
-    
-        float _time;
-        bool _isFinished;
+        public float Time { get; private set; }
+        public bool IsFinished { get; private set; }
 
         public void Set(float t)
         {
-            _time = t;
+            Time = t;
             if (t > 0)
-                _isFinished = false;
+                IsFinished = false;
         }
 
         public void Tick(float d)
         {
-            _time -= d;
-            if (!_isFinished && _time <= 0)
+            Time -= d;
+            if (!IsFinished && Time <= 0)
             {
-                _isFinished = true;
+                IsFinished = true;
                 OnFinished?.Invoke();
             }
         }

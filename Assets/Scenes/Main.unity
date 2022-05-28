@@ -5722,7 +5722,7 @@ MonoBehaviour:
     <Speed>k__BackingField: 20
     <Acceleration>k__BackingField: 0.4
     <Deceleration>k__BackingField: 0.2
-    _wallJumpBounce: {x: 30, y: 30}
+    _wallJumpBounce: {x: 23, y: 30}
     _wallJumpFreeze: 0.1
     _groundDetectionDelay: 0.5
     _onLand:

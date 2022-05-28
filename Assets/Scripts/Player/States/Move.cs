@@ -23,7 +23,7 @@ namespace Player
         
         protected PlayerController Player { get; private set; }
 
-        bool _canMove;
+        bool _canMove = true;
         bool _isMoving;
 
         public override void Init(PlayerController player) => Player = player;

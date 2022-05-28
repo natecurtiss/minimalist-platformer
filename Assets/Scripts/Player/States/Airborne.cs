@@ -31,6 +31,7 @@ namespace Player
 
         public override void Update()
         {
+            TickTimers();
             if (Player.WallCheck.IsOnWall && Player.Inputs.Jump)
                 WallJump();
             else if (Player.GroundCheck.IsGrounded)
@@ -42,7 +43,9 @@ namespace Player
         void WallJump()
         {
             Stop();
-            Player.Rigidbody.velocity = _wallJumpBounce * (int) Player.WallCheck.WallSide;
+            var bounce = _wallJumpBounce;
+            var side = (int) Player.WallCheck.WallSide;
+            Player.Rigidbody.velocity = new(bounce.x * -side, bounce.y);
             _wallJumpTimer.Set(_wallJumpFreeze);
             _onWallJump.Invoke();
         }

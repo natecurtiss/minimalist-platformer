@@ -20,5 +20,7 @@ namespace Player
             if (hit.collider is not null) 
                 _groundTimer = _coyoteTime;
         }
+
+        public void Reset() => _groundTimer = 0f;
     }
 }

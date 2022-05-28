@@ -5657,10 +5657,34 @@ MonoBehaviour:
     _jump: 30
     _onJump:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1614209122}
+          m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+          m_MethodName: Stop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     _onFall:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1614209122}
+          m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+          m_MethodName: Stop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   _airborneState:
     _onStartMoving:
       m_PersistentCalls:
@@ -5683,11 +5707,11 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    <Speed>k__BackingField: 10
+    <Speed>k__BackingField: 20
     <Acceleration>k__BackingField: 0.4
     <Deceleration>k__BackingField: 0.2
-    _wallJumpBounce: {x: 20, y: 20}
-    _wallJumpFreeze: 1
+    _wallJumpBounce: {x: 30, y: 30}
+    _wallJumpFreeze: 0.1
     _onLand:
       m_PersistentCalls:
         m_Calls:
@@ -5749,7 +5773,7 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 64
-  _distance: 1.66
+  _distance: 1.7
   _coyoteTime: 0.2
 --- !u!114 &1034817822
 MonoBehaviour:

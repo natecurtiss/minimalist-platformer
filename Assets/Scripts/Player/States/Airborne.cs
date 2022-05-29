@@ -55,7 +55,6 @@ namespace Player
             Player.Rigidbody.velocity = new(bounce.x * -side, bounce.y);
             _wallJumpTimer.Set(_wallJumpFreeze);
             _onWallJump.Invoke();
-            // TODO: Squish on wall jump based on Direction.
         }
 
         void Land()

@@ -11,21 +11,27 @@ namespace MP.Levels
         [SerializeField] SceneAsset _menu;
         [SerializeField] List<SceneAsset> _levels;
 #endif
-        readonly List<string> _levelNames = new();
+        [SerializeField, HideInInspector] 
+        List<string> _levelNames = new();
 
         public string Menu { get; private set; }
         public string Level1 => _levelNames[0];
-
+        
         public void OnBeforeSerialize()
         {
-            if (_levels.Count > 0)
-                _levels.ForEach(s => _levelNames.Add(s.name));
+#if UNITY_EDITOR
+            _levels.ForEach(s =>
+            {
+                if (s != null)
+                    _levelNames.Add(s.name);
+            });
             if (_menu != null)
                 Menu = _menu.name;
+#endif
         }
 
         public void OnAfterDeserialize() { }
 
-        public string NextLevel(string level) => _levelNames.Find(l => l == level);
+        public string NextLevel(string level) => _levelNames[_levelNames.IndexOf(level) + 1];
     }
 }

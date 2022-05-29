@@ -1,7 +1,9 @@
 {
     "name": "MP.Levels",
     "rootNamespace": "MP.Levels",
-    "references": [],
+    "references": [
+        "GUID:ebf2c97c17560ba489ee71ce0cf40e84"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

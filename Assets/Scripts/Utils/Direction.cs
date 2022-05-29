@@ -1,4 +1,4 @@
-﻿namespace MP.Utils.Utils
+﻿namespace MP.Utils
 {
     public enum Direction
     {

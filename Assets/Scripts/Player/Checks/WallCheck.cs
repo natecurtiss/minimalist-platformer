@@ -1,6 +1,6 @@
-﻿using MP.Utils.Utils;
+﻿using MP.Utils;
 using UnityEngine;
-using static MP.Utils.Utils.Direction;
+using static MP.Utils.Direction;
 using static UnityEngine.Physics2D;
 
 namespace MP.Player.Checks

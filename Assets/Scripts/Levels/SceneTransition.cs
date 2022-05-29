@@ -11,9 +11,9 @@ namespace MP.Levels
     {
         public static event Action OnStart;
         
-        [SerializeField] float _in = 0.4f;
-        [SerializeField] float _middleDelay = 0.4f;
-        [SerializeField] float _out = 0.8f;
+        [SerializeField] float _in = 0.3f;
+        [SerializeField] float _middleDelay = 0.3f;
+        [SerializeField] float _out = 0.6f;
         [SerializeField] Ease _ease = Linear;
         
         SpriteRenderer _spriteRenderer;

@@ -5187,7 +5187,7 @@ MonoBehaviour:
     <Speed>k__BackingField: 20
     <Acceleration>k__BackingField: 0.4
     <Deceleration>k__BackingField: 0.2
-    _wallJumpBounce: {x: 27, y: 25}
+    _wallJumpBounce: {x: 30, y: 27}
     _wallJumpFreeze: 0.1
     _groundDetectionDelay: 0.5
     _onLand:
@@ -5281,7 +5281,7 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 64
-  _distance: 1.5
+  _distance: 1.3
 --- !u!114 &8571986678362978567
 MonoBehaviour:
   m_ObjectHideFlags: 0

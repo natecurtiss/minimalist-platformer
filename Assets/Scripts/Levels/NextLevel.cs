@@ -9,12 +9,8 @@ namespace MP.Levels
         
         void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Next Level"))
-            {
-                Debug.Log(GetActiveScene().name);
-                Debug.Log(_levels.NextLevel(GetActiveScene().name));
+            if (other.CompareTag("Next Level")) 
                 SceneTransition.Main.Play(_levels.NextLevel(GetActiveScene().name));
-            }
         }
     }
 }

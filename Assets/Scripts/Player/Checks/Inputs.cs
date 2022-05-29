@@ -23,7 +23,7 @@ namespace MP.Player.Checks
         void GetInput()
         {
             Horizontal = GetAxisRaw("Horizontal");
-            if (GetAxisRaw("Vertical") == 1)
+            if (GetKeyDown(KeyCode.W) || GetKeyDown(KeyCode.UpArrow))
                 _jumpTimer = _jumpBuffer;
         }
 

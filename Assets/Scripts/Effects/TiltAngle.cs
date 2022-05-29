@@ -1,10 +1,9 @@
 using DG.Tweening;
 using UnityEngine;
-using static UnityEngine.Mathf;
 using static UnityEngine.Quaternion;
 using static UnityEngine.Time;
 
-namespace Effects
+namespace MP.Effects
 {
     class TiltAngle : MonoBehaviour
     {

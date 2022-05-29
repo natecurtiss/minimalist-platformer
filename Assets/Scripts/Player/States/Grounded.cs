@@ -1,9 +1,9 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Events;
-using static Player.StateID;
+using static MP.Player.StateID;
 
-namespace Player
+namespace MP.Player.States
 {
     [Serializable]
     class Grounded : Move

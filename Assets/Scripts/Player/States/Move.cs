@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using static UnityEngine.Mathf;
 
-namespace Player
+namespace MP.Player.States
 { 
     [Serializable]
     abstract class Move : State

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Effects
+namespace MP.Effects
 {
     class ParticleSpawn : MonoBehaviour
     {

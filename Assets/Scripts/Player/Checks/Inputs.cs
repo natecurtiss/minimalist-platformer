@@ -2,7 +2,7 @@
 using static UnityEngine.Input;
 using static UnityEngine.Time;
 
-namespace Player
+namespace MP.Player.Checks
 {
     class Inputs : MonoBehaviour
     {

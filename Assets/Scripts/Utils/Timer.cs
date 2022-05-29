@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Utils
+namespace MP.Utils
 {
-    class Timer
+    public sealed class Timer
     {
         public event Action OnFinished;
         public float Time { get; private set; }

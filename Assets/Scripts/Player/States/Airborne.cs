@@ -1,11 +1,11 @@
 ﻿using System;
+using MP.Utils;
 using UnityEngine;
 using UnityEngine.Events;
-using Utils;
-using static Player.StateID;
+using static MP.Player.StateID;
 using static UnityEngine.Time;
 
-namespace Player
+namespace MP.Player.States
 {
     [Serializable]
     class Airborne : Move

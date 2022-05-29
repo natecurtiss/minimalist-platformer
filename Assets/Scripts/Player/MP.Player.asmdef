@@ -1,0 +1,16 @@
+{
+    "name": "MP.Player",
+    "rootNamespace": "MP.Player",
+    "references": [
+        "GUID:ebf2c97c17560ba489ee71ce0cf40e84"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -2,7 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using static UnityEngine.Mathf;
 
-namespace Effects
+namespace MP.Effects
 {
     class FlipDirection : MonoBehaviour
     {

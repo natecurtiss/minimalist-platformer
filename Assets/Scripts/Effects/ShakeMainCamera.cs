@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace Effects
+namespace MP.Effects
 {
     class ShakeMainCamera : MonoBehaviour
     {

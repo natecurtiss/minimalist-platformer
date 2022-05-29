@@ -3,7 +3,7 @@ using UnityEngine;
 using static DG.Tweening.DOTween;
 using static DG.Tweening.Ease;
 
-namespace Effects
+namespace MP.Effects
 {
     class SquashAndStretch : MonoBehaviour
     {

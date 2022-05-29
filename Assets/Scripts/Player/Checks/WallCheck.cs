@@ -1,10 +1,9 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
-using Utils;
-using static Utils.Direction;
+﻿using MP.Utils.Utils;
+using UnityEngine;
+using static MP.Utils.Utils.Direction;
 using static UnityEngine.Physics2D;
 
-namespace Player
+namespace MP.Player.Checks
 {
     class WallCheck : MonoBehaviour
     {

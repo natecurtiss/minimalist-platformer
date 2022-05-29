@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
 using static UnityEngine.Color;
 using static UnityEngine.Gizmos;
 using static UnityEngine.Physics2D;
 using static UnityEngine.Time;
 
-namespace Player
+namespace MP.Player.Checks
 {
     class GroundCheck : MonoBehaviour
     {

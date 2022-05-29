@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 using static UnityEngine.ForceMode2D;
@@ -8,7 +7,7 @@ using static UnityEngine.Mathf;
 using static UnityEngine.Physics2D;
 using static UnityEngine.Time;
 
-namespace Player
+namespace MP.Player
 {
     class PlayerMovement : MonoBehaviour
     {

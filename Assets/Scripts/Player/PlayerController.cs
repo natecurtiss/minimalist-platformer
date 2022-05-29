@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using MP.Player.Checks;
+using MP.Player.States;
 using UnityEngine;
-using static Player.StateID;
+using static MP.Player.StateID;
 
-namespace Player
+namespace MP.Player
 {
     class PlayerController : MonoBehaviour
     {

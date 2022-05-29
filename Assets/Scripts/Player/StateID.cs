@@ -1,4 +1,4 @@
-﻿namespace Player
+﻿namespace MP.Player
 {
     enum StateID
     {

@@ -7,7 +7,7 @@ using static UnityEngine.SceneManagement.SceneManager;
 
 namespace MP.Levels
 {
-    class SceneTransition : MonoBehaviour
+    public sealed class SceneTransition : MonoBehaviour
     {
         public static event Action OnStart;
         

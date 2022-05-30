@@ -1,0 +1,16 @@
+{
+    "name": "MP.Hazards",
+    "rootNamespace": "MP.Hazards",
+    "references": [
+        "GUID:c2863584ed733674fa903813c8cd3873"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

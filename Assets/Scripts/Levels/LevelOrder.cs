@@ -32,6 +32,10 @@ namespace MP.Levels
 
         public void OnAfterDeserialize() { }
 
-        public string NextLevel(string level) => _levelNames[_levelNames.IndexOf(level) + 1];
+        public string NextLevel(string level)
+        {
+            var next = _levelNames.IndexOf(level) + 1;
+            return next > _levelNames.Count - 1 ? level : _levelNames[next];
+        }
     }
 }

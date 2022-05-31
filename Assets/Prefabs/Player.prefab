@@ -4895,6 +4895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7361276235484803580}
   - component: {fileID: 7361276235484803581}
+  - component: {fileID: 7921305187168925426}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -4910,7 +4911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7361276235484803579}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4970,6 +4971,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7921305187168925426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361276235484803579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04f88273ade43e42a3de96da6c2dc04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 0.1
+  _ease: 1
 --- !u!1 &7361276235926778383
 GameObject:
   m_ObjectHideFlags: 0
@@ -9848,7 +9863,6 @@ GameObject:
   - component: {fileID: 7361276236505039693}
   - component: {fileID: 7361276236505039695}
   - component: {fileID: 8571986678362978567}
-  - component: {fileID: 5136865103072277762}
   - component: {fileID: 5603187868680630875}
   - component: {fileID: 159387678351266518}
   m_Layer: 0
@@ -10183,18 +10197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levels: {fileID: 11400000, guid: 2f2241508fdf18d4b9690f234a5bc2fe, type: 2}
---- !u!114 &5136865103072277762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7361276236505039685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8ea65a78a4453f8dc330aafa289712, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   _callback:
     m_PersistentCalls:
       m_Calls:
@@ -10210,10 +10212,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7361276235484803581}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 7921305187168925426}
+        m_TargetAssemblyTypeName: MP.Effects.FadeAway, MP.Effects
+        m_MethodName: Do
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

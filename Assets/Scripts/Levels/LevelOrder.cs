@@ -20,6 +20,7 @@ namespace MP.Levels
         public void OnBeforeSerialize()
         {
 #if UNITY_EDITOR
+            _levelNames.Clear();
             _levels.ForEach(s =>
             {
                 if (s != null)
@@ -32,10 +33,10 @@ namespace MP.Levels
 
         public void OnAfterDeserialize() { }
 
-        public string NextLevel(string level)
+        public string NextLevel(string current)
         {
-            var next = _levelNames.IndexOf(level) + 1;
-            return next > _levelNames.Count - 1 ? level : _levelNames[next];
+            var next = _levelNames.IndexOf(current) + 1;
+            return next > _levelNames.Count - 1 ? current : _levelNames[next];
         }
     }
 }

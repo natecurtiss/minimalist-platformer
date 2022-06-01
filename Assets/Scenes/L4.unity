@@ -4691,9 +4691,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7361276236505039692, guid: a7b5b221e5d17b04892bd7dd32e65943, type: 3}
-      propertyPath: _airborneState._groundDetectionDelayOnStart
-      value: 0.3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7b5b221e5d17b04892bd7dd32e65943, type: 3}

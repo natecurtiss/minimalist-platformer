@@ -10091,7 +10091,7 @@ MonoBehaviour:
     <Deceleration>k__BackingField: 0.2
     _wallJumpBounce: {x: 30, y: 27}
     _wallJumpFreeze: 0.1
-    _groundDetectionDelayOnStart: 0.3
+    _groundDetectionDelayOnStart: 0.25
     _onLand:
       m_PersistentCalls:
         m_Calls:

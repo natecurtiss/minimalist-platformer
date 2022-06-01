@@ -9933,7 +9933,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 38df0eeb66c262f44b6481cc70579bac, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7361276236505039692
 MonoBehaviour:
@@ -10091,7 +10091,7 @@ MonoBehaviour:
     <Deceleration>k__BackingField: 0.2
     _wallJumpBounce: {x: 30, y: 27}
     _wallJumpFreeze: 0.1
-    _groundDetectionDelay: 0.5
+    _groundDetectionDelayOnStart: 0.3
     _onLand:
       m_PersistentCalls:
         m_Calls:
@@ -10287,6 +10287,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _abyss: -25
 --- !u!61 &159387678351266518
 BoxCollider2D:
   m_ObjectHideFlags: 0

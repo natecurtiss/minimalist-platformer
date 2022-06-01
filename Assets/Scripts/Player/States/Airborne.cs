@@ -12,7 +12,7 @@ namespace MP.Player.States
     {
         [SerializeField] Vector2 _wallJumpBounce = Vector2.one * 20;
         [SerializeField] float _wallJumpFreeze = 1f;
-        [SerializeField] float _groundDetectionDelay = 0.5f;
+        [SerializeField] float _groundDetectionDelayOnStart = 0.1f;
         [SerializeField, Space] UnityEvent _onLand;
         [SerializeField, Space] UnityEvent _onWallJump;
         
@@ -23,7 +23,7 @@ namespace MP.Player.States
         {
             base.Enter();
             _wallJumpTimer.OnFinished += ResumeMovement;
-            _initialGroundedDelay.Set(_groundDetectionDelay);
+            _initialGroundedDelay.Set(_groundDetectionDelayOnStart);
         }
 
         public override void Exit()
@@ -35,10 +35,10 @@ namespace MP.Player.States
         public override void Update()
         {
             TickTimers();
-            if (Player.WallCheck.IsOnWall && Player.Inputs.Jump)
-                WallJump();
-            else if (Player.GroundCheck.IsGrounded && _initialGroundedDelay.IsFinished)
+            if (Player.GroundCheck.IsGrounded && _initialGroundedDelay.IsFinished)
                 Land();
+            else if (Player.WallCheck.IsOnWall && Player.Inputs.Jump)
+                WallJump();
         }
 
         void TickTimers()

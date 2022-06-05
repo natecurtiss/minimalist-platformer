@@ -18,8 +18,12 @@ MonoBehaviour:
   - {fileID: 102900000, guid: 5112e8a4b7509b241884d4eb2dc5bfd6, type: 3}
   - {fileID: 102900000, guid: 27bbde7567d0c1b4185e911d95f155c9, type: 3}
   - {fileID: 102900000, guid: 23b2ab42bfd3d5a4baec7ef1763a494e, type: 3}
+  - {fileID: 102900000, guid: 611683dd9fbc0104bb0fc5a83ce5cceb, type: 3}
+  - {fileID: 102900000, guid: ce22a992df9f77a449e0516fe1226c44, type: 3}
   _levelNames:
   - L1
   - L2
   - L3
   - L4
+  - L5
+  - L6

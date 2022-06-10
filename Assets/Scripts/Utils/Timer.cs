@@ -6,7 +6,7 @@ namespace MP.Utils
     {
         public event Action OnFinished;
         public float Time { get; private set; }
-        public bool IsFinished { get; private set; }
+        public bool IsFinished { get; private set; } = true;
 
         public void Set(float t)
         {

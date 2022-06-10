@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef246cd794194462996b45d8fa5f4ba6, type: 3}
   m_Name: Levels
   m_EditorClassIdentifier: 
-  _menu: {fileID: 0}
+  _menu: {fileID: 102900000, guid: 9831e8e0b91c0d245969826a2f67de79, type: 3}
   _levels:
   - {fileID: 102900000, guid: 28706bf7d46f7824cb711d387940393f, type: 3}
   - {fileID: 102900000, guid: 5112e8a4b7509b241884d4eb2dc5bfd6, type: 3}
@@ -21,6 +21,7 @@ MonoBehaviour:
   - {fileID: 102900000, guid: 611683dd9fbc0104bb0fc5a83ce5cceb, type: 3}
   - {fileID: 102900000, guid: ce22a992df9f77a449e0516fe1226c44, type: 3}
   - {fileID: 102900000, guid: 4f6c8cd08a7993f47af1227ea327f4ae, type: 3}
+  - {fileID: 102900000, guid: 559a1eddda9405748a5250981cc78156, type: 3}
   _levelNames:
   - L1
   - L2
@@ -29,3 +30,4 @@ MonoBehaviour:
   - L5
   - L6
   - L7
+  - M2

@@ -17,6 +17,7 @@ namespace MP.Levels
         [SerializeField] Ease _ease = Linear;
         
         SpriteRenderer _spriteRenderer;
+        bool _isPlaying;
         
         public static SceneTransition Main
         {
@@ -41,12 +42,20 @@ namespace MP.Levels
 
         void Awake() => _spriteRenderer = GetComponent<SpriteRenderer>();
 
-        public void Play(string toScene) => Sequence()
-            .SetEase(_ease)
-            .AppendCallback(() => OnStart?.Invoke())
-            .Append(ToAlpha(() => _spriteRenderer.color, c => _spriteRenderer.color = c, 1f, _in))
-            .AppendInterval(_middleDelay)
-            .AppendCallback(() => LoadScene(toScene))
-            .Append(ToAlpha(() => _spriteRenderer.color, c => _spriteRenderer.color = c, 0f, _out));
+        public void Play(string toScene)
+        {
+            if (_isPlaying)
+                return;
+            _isPlaying = true;
+            Sequence()
+                .SetEase(_ease)
+                .AppendCallback(() => OnStart?.Invoke())
+                .Append(ToAlpha(() => _spriteRenderer.color, c => _spriteRenderer.color = c, 1f, _in))
+                .AppendInterval(_middleDelay)
+                .AppendCallback(() => LoadScene(toScene))
+                .Append(ToAlpha(() => _spriteRenderer.color, c => _spriteRenderer.color = c, 0f, _out))
+                .AppendInterval(_out)
+                .AppendCallback(() => _isPlaying = false);
+        }
     }
 }
